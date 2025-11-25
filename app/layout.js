@@ -1,3 +1,4 @@
+import Headers from "../components/Headers.jsx";
 import { ThemeProvider } from "../components/theme-provider.jsx";
 import "./globals.css";
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {/* Header */}
+          <Headers />
 
           <main className="relative container mx-auto min-h-screen pt-40 md:pt-32">
             {/* Glow */}
