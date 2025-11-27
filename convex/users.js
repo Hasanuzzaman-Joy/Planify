@@ -20,7 +20,6 @@ export const store = mutation({
       .unique();
 
     if (user !== null) {
-      // If we've seen this identity before but details changed, update them
       const updates = {};
       if (user.name !== identity.name) {
         updates.name = identity.name ?? "Anonymous";
@@ -83,7 +82,7 @@ export const completeOnboarding = mutation({
   args: {
     location: v.object({
       city: v.string(),
-      state: v.optional(v.string()), // Added state field
+      state: v.optional(v.string()), 
       country: v.string(),
     }),
     interests: v.array(v.string()), // Min 3 categories
