@@ -1,5 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import Headers from "../components/Headers.jsx";
+import Header from "../components/Header.jsx";
 import { ThemeProvider } from "../components/theme-provider.jsx";
 import { ConvexClientProvider } from "../components/ConvexClientProvider.jsx";
 import "./globals.css";
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           }}>
             <ConvexClientProvider>
               {/* Header */}
-              <Headers />
+              <Header />
 
               <main className="relative container mx-auto min-h-screen pt-40 md:pt-32">
                 {/* Glow */}

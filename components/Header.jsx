@@ -12,7 +12,7 @@ import { Building, Plus, Ticket } from "lucide-react";
 
 const Headers = () => {
   const { isLoading } = useStoreUser();
-  const [showUpgradeModal, setShowUpgradeModal] = useState();
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   return (
     <>
