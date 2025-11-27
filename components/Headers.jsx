@@ -6,9 +6,13 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import { Authenticated, Unauthenticated } from "convex/react";
-import {BarLoader} from "react-spinners";
+import { BarLoader } from "react-spinners";
+import { useStoreUser } from "@/hooks/use-store-user";
 
 const Headers = () => {
+
+   const { isLoading } = useStoreUser();
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 bg-background/80 z-20 border-b">
@@ -44,9 +48,11 @@ const Headers = () => {
         {/* Mobile search and location - below header */}
 
         {/* Loader */}
-        <div className="absolute bottom-0 left-0 w full">
-          <BarLoader width={"100%"} color="#a855f7" />
-        </div>
+        {isLoading && (
+          <div className="absolute bottom-0 left-0 w-full">
+            <BarLoader width={"100%"} color="#a855f7" />
+          </div>
+        )}
       </nav>
     </>
   );
