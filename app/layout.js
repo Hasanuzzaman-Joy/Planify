@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import Headers from "../components/Headers.jsx";
 import { ThemeProvider } from "../components/theme-provider.jsx";
-import { ConvexClientProvider } from "./ConvexClientProvider.jsx";
+import { ConvexClientProvider } from "../components/ConvexClientProvider.jsx";
 import "./globals.css";
 import { dark } from "@clerk/themes";
 

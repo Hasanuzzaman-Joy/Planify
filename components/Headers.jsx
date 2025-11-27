@@ -1,6 +1,6 @@
 "use client";
 
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -29,14 +29,14 @@ const Headers = () => {
 
           {/* Right side actions */}
           <div className="flex items-center">
+            <Authenticated>
+              <UserButton />
+            </Authenticated>
             <Unauthenticated>
               <SignInButton mode="modal">
               <Button size="sm">Sign In</Button>
               </SignInButton>
             </Unauthenticated>
-            <Authenticated>
-              <UserButton />
-            </Authenticated>
           </div>
 
         </div>
